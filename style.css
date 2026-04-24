@@ -1,0 +1,190 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;
+  background-color: #0f172a; 
+  color: #f1f5f9; 
+  
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: #1e293b;
+  padding: 16px 40px;
+  border-bottom: 3px solid #e94560;
+}
+
+.main { grid-area: main; }
+
+.footer {
+  grid-area: footer;
+  background-color: #1e293b;
+  color: #f1f5f9;
+  text-align: center;
+  padding: 20px;
+  border-top: 3px solid #e94560;
+  line-height: 1.6;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo { color: #e94560; font-size: 1.4rem; font-weight: bold; }
+
+.nav-links {
+  display: flex;
+  gap: 20px; 
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f1f5f9; 
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover { color: #e94560; }
+
+.hero { padding: 60px 40px; background-color: #16213e; }
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #e94560;
+  margin-bottom: 16px;
+}
+
+.hero-title { font-size: 2.5rem; font-weight: bold; color: #e94560; }
+
+.class-badge {
+  display: inline-block;
+  background-color: #e94560;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.hero-bio { margin-top: 16px; max-width: 600px; line-height: 1.6; }
+
+.hero-meta { margin-top: 20px; }
+.hero-meta dt { color: #e94560; font-weight: bold; display: inline; }
+.hero-meta dd { display: inline; margin-left: 5px; margin-right: 15px; }
+
+.section-title {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #e94560;
+  padding-bottom: 8px;
+}
+
+.stats-section { padding: 60px 40px; background-color: #0f3460; }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background-color: #16213e;
+  border: 1px solid #e94560;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.stat-card img { width: 40px; border-radius: 50%; margin-bottom: 10px; }
+.stat-value { font-size: 2.5rem; font-weight: bold; color: #e94560; }
+.stat-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: #cbd5e1; }
+
+.skills-section { padding: 60px 40px; background-color: #1a1a2e; }
+
+.skill-card {
+  border: 1px solid #e94560;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  background-color: #16213e;
+}
+
+.skill-name { font-size: 1.2rem; font-weight: bold; color: #e94560; margin-bottom: 8px; }
+.skill-desc { line-height: 1.5; }
+.skill-cost { font-size: 0.85rem; color: #cbd5e1; margin-top: 8px; }
+
+.tags {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #e94560;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.challenge-section { padding: 60px 40px; background-color: #0f3460; }
+.challenge-intro { margin-bottom: 24px; max-width: 600px; line-height: 1.6; }
+
+form label { display: block; margin-bottom: 6px; font-weight: bold; color: #e94560; }
+
+input, select {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #e94560;
+  background-color: #16213e;
+  color: #ffffff; 
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input:focus, select:focus, .btn:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #e94560;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn:hover { background-color: #ff5c77; }
+.btn:active { transform: scale(0.98); }
